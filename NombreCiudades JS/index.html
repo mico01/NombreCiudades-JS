@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nombre Ciudades JS</title>
+</head>
+<body>
+    
+   <form>
+       <label for="texto">Escribe el nombre de seis ciudades: </label><br>
+        <input type="text" id='texto1'><br>
+        <br>
+        <input type="text" id='texto2'><br> 
+        <br>
+        <input type="text" id='texto3'><br>
+        <br>
+        <input type="text" id='texto4'><br>
+        <br>
+        <input type="text" id='texto5'><br>
+        <br>
+        <input type="text" id='texto6'><br>
+        <br>
+        
+       <button type="button" onclick='' id="button">Invio</button>
+
+       <p id="output1" />
+       <p id="output2" />
+       <p id="output3" />
+       <p id="output4" />
+       <p id="output55" />
+       <p id="output5" />
+       <p id="output6" />
+       <p id="output7" />
+       <p id="output8" />
+       <p id="output9" />
+       <p id="output10" />
+   </form> 
+   <script>
+     
+ 
+
+document.getElementById("button").addEventListener("click",function()
+{
+    
+       var ciudad1 = document.getElementById('texto1').value;
+       var ciudad2 = document.getElementById('texto2').value;
+       var ciudad3 = document.getElementById('texto3').value;
+       var ciudad4 = document.getElementById('texto4').value;
+       var ciudad5 = document.getElementById('texto5').value;
+       var ciudad6 = document.getElementById('texto6').value;
+    document.getElementById("output1").innerHTML = "tu lista es: "+ciudad1+" "+ciudad2+" "+ciudad3+" "+ciudad4+" "+ciudad5+" "+ciudad6 ;
+    
+    var arrayDue = [ciudad1,ciudad2,ciudad3,ciudad4,ciudad5,ciudad6];
+   // orden alfab.
+    document.getElementById("output2").innerHTML = "tu lista en orden alfab. es: "+arrayDue.sort();
+    
+    var ciudadUno = ciudad1.replace("a", "4");
+    var ciudadDue = ciudad2.replace("a", "4");
+    var ciudadTre = ciudad3.replace("a", "4");
+    var ciudadQuatro = ciudad4.replace("a", "4");
+    var ciudadCinque = ciudad5.replace("a", "4");
+    var ciudadSei = ciudad6.replace("a", "4");
+    document.getElementById("output3").innerHTML = "cambio 'a' x '4':  "+ciudadUno+" "+ciudadDue+" "+ciudadTre+" "+ciudadQuatro+" "+ciudadCinque+" "+ciudadSei;
+    
+    var arrayTre = [ciudadUno,ciudadDue,ciudadTre,ciudadQuatro,ciudadCinque,ciudadSei];
+    // oreden alfab. modificado
+    document.getElementById("output4").innerHTML = "tu lista en orden alfab. es: "+arrayTre.sort();
+   
+    // array char ciudades
+   document.getElementById("output55").innerHTML = "nombre ciudades al revers: ";
+    var arrayChar1 = Array.from(ciudad1);
+    document.getElementById("output5").innerHTML = ".. " + arrayChar1.reverse();
+    var arrayChar2 = Array.from(ciudad2);
+    document.getElementById("output6").innerHTML = ".. " + arrayChar2.reverse();
+    var arrayChar3 = Array.from(ciudad3);
+    document.getElementById("output7").innerHTML = ".. " + arrayChar3.reverse();
+    var arrayChar4 = Array.from(ciudad4);
+    document.getElementById("output8").innerHTML = ".. " + arrayChar4.reverse();
+    var arrayChar5 = Array.from(ciudad5);
+    document.getElementById("output9").innerHTML = ".. " + arrayChar5.reverse();
+    var arrayChar6 = Array.from(ciudad6);
+    document.getElementById("output10").innerHTML = ".. " + arrayChar6.reverse();
+
+
+})
+
+ 
+
+    
+   </script>
+   
+  
+
+</body>
+</html>
